@@ -27,11 +27,11 @@ module.exports = {
                 loader: 'babel-loader',
                 exclude: /node_modules/, // 排除不想编译的目录
                 options: {
-                    presets: {
+                    presets: [
                         ['env', {
                             modules: false
                         }]
-                    }
+                    ]
                 }
             },
             {

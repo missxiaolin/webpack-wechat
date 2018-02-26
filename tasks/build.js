@@ -16,11 +16,11 @@ mkdir(asstsPath)
 
 var renderConf = webpackConf
 
-renderConf.entry = () => _.reduce(config.json.pages, (en, i) => {
+var entry = () => _.reduce(config.json.pages, (en, i) => {
     en[i] = resolve(process.cwd(), './', `${i}.mina`)
 
-    return entry
-})
+    return en
+},{})
 
 renderConf.entry = entry()
 renderConf.entry.app = config.app
