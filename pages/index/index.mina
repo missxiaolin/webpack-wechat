@@ -13,13 +13,8 @@
       motto: "Hello World",
       userInfo: {}
     },
-    async onLoad: function () {
+    onLoad: function () {
       console.log(1111)
-      const userInfo = await app.getUserInfo()
-
-      this.setData({
-        userInfo: userInfo
-      })
     }
   });
 </script>

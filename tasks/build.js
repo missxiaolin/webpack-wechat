@@ -5,10 +5,10 @@ const fs = require('fs')
 const _ = require('lodash')
 const { resolve } = require('path')
 
-const r = url => resolve(process.cwd(),url)
+const r = url => resolve(process.cwd(), url)
 
 const webpackConf = require('./webpack.conf')
-const config = require(r('./mina-config'))
+const config = require(r('./mina.conf'))
 const asstsPath = r('./mina')
 
 rm('-rf', asstsPath)
@@ -20,7 +20,7 @@ var entry = () => _.reduce(config.json.pages, (en, i) => {
     en[i] = resolve(process.cwd(), './', `${i}.mina`)
 
     return en
-},{})
+}, {})
 
 renderConf.entry = entry()
 renderConf.entry.app = config.app
@@ -32,7 +32,7 @@ renderConf.output = {
 
 var compiler = webpack(renderConf)
 
-fs.writeFileSync(r('./mina/app.json'), JSON.stringify(config.json),'utf8')
+fs.writeFileSync(r('./mina/app.json'), JSON.stringify(config.json), 'utf8')
 
 compiler.watch({
     aggregateTimeout: 300,
