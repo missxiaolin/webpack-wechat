@@ -1,6 +1,7 @@
-<template lang="pug">
-  view.container
-   view.userinfo
+<template>
+  <view>
+    测试
+  </view>
 
 </template>
 
