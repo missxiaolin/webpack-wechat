@@ -8,14 +8,17 @@
 <script>
   const { regeneratorRuntime, util } = global
   const app = getApp();
+  import { pvSend } from '../../utils/mixin'
 
   Page({
     data: {
       motto: "Hello World",
       userInfo: {}
     },
+    mixins: [pvSend],
     onLoad: function () {
       console.log(1111)
+      this.pvSend()
     }
   });
 </script>
