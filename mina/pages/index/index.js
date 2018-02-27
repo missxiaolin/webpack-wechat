@@ -92,24 +92,43 @@ module.exports = g;
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {var _global = global,
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_mixin__ = __webpack_require__(2);
+var _global = global,
     regeneratorRuntime = _global.regeneratorRuntime,
     util = _global.util;
 
 var app = getApp();
 
+
 Page({
+  mixins: [__WEBPACK_IMPORTED_MODULE_0__utils_mixin__["a" /* indexPv */]],
   data: {
     motto: "Hello World",
     userInfo: {}
   },
   onLoad: function onLoad() {
     console.log(1111);
+    this.pvSend();
   }
 });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+
+/***/ }),
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return indexPv; });
+/** mixin测试 */
+var indexPv = {
+    pvSend: function pvSend() {
+        console.log('pvsend');
+    }
+};
 
 /***/ })
 /******/ ]);

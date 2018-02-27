@@ -1,8 +1,6 @@
-/**
- * 自适应高度
- */
+/** mixin测试 */
 export const indexPv = {
-    pvSend() {
+    pvSend: function() {
         console.log('pvsend')
     }
 }
