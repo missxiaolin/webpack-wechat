@@ -8,10 +8,8 @@
 <script>
   const { regeneratorRuntime, util } = global
   const app = getApp();
-  import { indexPv } from '../../utils/mixin'
 
   Page({
-    mixins: [indexPv],
     data: {
       motto: "Hello World",
       userInfo: {}

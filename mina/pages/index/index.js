@@ -105,7 +105,7 @@ var app = getApp();
 
 
 Page({
-  mixins: [__WEBPACK_IMPORTED_MODULE_0__utils_mixin__["a" /* indexPv */]],
+  minimist: [__WEBPACK_IMPORTED_MODULE_0__utils_mixin__["a" /* indexPv */]],
   data: {
     motto: "Hello World",
     userInfo: {}
