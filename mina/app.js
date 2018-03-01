@@ -98,12 +98,63 @@ module.exports = g;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vendor__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__style_base_sass__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__style_base_sass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__style_base_sass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__vendor__ = __webpack_require__(5);
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+
 
 
 
 App({
   onLaunch: function onLaunch() {},
+  getUserInfo: function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+      var _ref2, code, _ref3, userInfo;
+
+      return regeneratorRuntime.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              if (!thi.globalData.userInfo) {
+                _context.next = 2;
+                break;
+              }
+
+              return _context.abrupt('return', this.globalData.userInfo);
+
+            case 2:
+              _context.next = 4;
+              return wx.loginAsync();
+
+            case 4:
+              _ref2 = _context.sent;
+              code = _ref2.code;
+              _context.next = 8;
+              return wx.getUserInfoAsync();
+
+            case 8:
+              _ref3 = _context.sent;
+              userInfo = _ref3.userInfo;
+
+
+              this.getUserInfo.userInfo = userInfo;
+
+            case 11:
+            case 'end':
+              return _context.stop();
+          }
+        }
+      }, _callee, this);
+    }));
+
+    function getUserInfo() {
+      return _ref.apply(this, arguments);
+    }
+
+    return getUserInfo;
+  }(),
+
   globalData: {
     userInfo: null
   }
@@ -111,14 +162,20 @@ App({
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_regenerator_runtime__ = __webpack_require__(5);
+/* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_regenerator_runtime__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_regenerator_runtime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_regenerator_runtime__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_util__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_util__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_util___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__utils_util__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ramda__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ramda__ = __webpack_require__(9);
 
 
 global.regeneratorRuntime = __WEBPACK_IMPORTED_MODULE_0_regenerator_runtime___default.a;
@@ -152,7 +209,7 @@ wx.reqAsync = asyncWrap('request');
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -177,7 +234,7 @@ var oldRuntime = hadRuntime && g.regeneratorRuntime;
 // Force reevalutation of runtime.js.
 g.regeneratorRuntime = undefined;
 
-module.exports = __webpack_require__(6);
+module.exports = __webpack_require__(7);
 
 if (hadRuntime) {
   // Restore the original runtime.
@@ -193,7 +250,7 @@ if (hadRuntime) {
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports) {
 
 /**
@@ -926,7 +983,7 @@ if (hadRuntime) {
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports) {
 
 var formatTime = function formatTime(date) {
@@ -950,7 +1007,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

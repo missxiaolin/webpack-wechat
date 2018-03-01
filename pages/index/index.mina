@@ -8,17 +8,30 @@
 <script>
   const { regeneratorRuntime, util } = global
   const app = getApp();
+  import {playlistMixin} from '../../utils/mixin'
+  
+export default {
+  mixins:[playlistMixin],
+  data:{
+    motto: "Hello World",
+  },
+  onLoad() {
+    console.log(1111)
+    this.pvSend()
+  }
+}
 
-  Page({
-    data: {
-      motto: "Hello World",
-      userInfo: {}
-    },
-    onLoad: function () {
-      console.log(1111)
-      this.pvSend()
-    }
-  });
+  // Page({
+  //   mixins:[playlistMixin],
+  //   data: {
+  //     motto: "Hello World",
+  //     userInfo: {}
+  //   },
+  //   onLoad: function () {
+  //     console.log(1111)
+  //     this.pvSend()
+  //   }
+  // });
 </script>
 
 <style lang="sass">

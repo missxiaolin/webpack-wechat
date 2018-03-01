@@ -104,17 +104,28 @@ var _global = global,
 var app = getApp();
 
 
-Page({
-  minimist: [__WEBPACK_IMPORTED_MODULE_0__utils_mixin__["a" /* indexPv */]],
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mixins: [__WEBPACK_IMPORTED_MODULE_0__utils_mixin__["a" /* playlistMixin */]],
   data: {
-    motto: "Hello World",
-    userInfo: {}
+    motto: "Hello World"
   },
   onLoad: function onLoad() {
     console.log(1111);
     this.pvSend();
   }
 });
+
+// Page({
+//   mixins:[playlistMixin],
+//   data: {
+//     motto: "Hello World",
+//     userInfo: {}
+//   },
+//   onLoad: function () {
+//     console.log(1111)
+//     this.pvSend()
+//   }
+// });
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
@@ -122,12 +133,20 @@ Page({
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return indexPv; });
-/** mixin测试 */
-var indexPv = {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return playlistMixin; });
+/**
+ * 自适应高度
+ */
+var playlistMixin = {
+  pvSend: function pvSend() {
+    console.log('pv');
+  },
+
+  methods: {
     pvSend: function pvSend() {
-        console.log('pvsend');
+      console.log('pv');
     }
+  }
 };
 
 /***/ })
