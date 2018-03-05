@@ -86,7 +86,10 @@ module.exports = {
             }
         ]),
         new webpack.optimize.ModuleConcatenationPlugin(),
-        // new webpack.optimize.UglifyJsPlugin(),
+        // 压缩是否开启
+        new webpack.optimize.UglifyJsPlugin({
+            sourceMap: false
+        }),
         new ProgressBarPlugin()
     ]
 }

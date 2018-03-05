@@ -34,6 +34,7 @@ var compiler = webpack(renderConf)
 
 fs.writeFileSync(r('./mina/app.json'), JSON.stringify(config.json), 'utf8')
 
+// 监听文件变化
 compiler.watch({
     aggregateTimeout: 300,
     poll: true

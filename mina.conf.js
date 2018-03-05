@@ -7,12 +7,12 @@ module.exports = {
         "pages": [
             "pages/index/index"
         ],
-    },
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "WeChat",
-        "navigationBarTextStyle": "black"
+        "window": {
+            "backgroundTextStyle": "light",
+            "navigationBarBackgroundColor": "#fff",
+            "navigationBarTitleText": "WeChat",
+            "navigationBarTextStyle": "black"
+        }
     },
     "assetsPath": assetsPath,
     "app": r('./app.js')
