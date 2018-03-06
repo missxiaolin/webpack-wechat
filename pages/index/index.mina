@@ -1,6 +1,6 @@
 <template>
   <view>
-    测试
+    测试ssss
   </view>
 
 </template>
@@ -14,7 +14,7 @@
       userInfo: {}
     },
     onLoad: function () {
-      console.log(1111)
+      console.log('aaa')
     }
   });
 </script>
