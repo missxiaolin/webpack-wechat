@@ -15,14 +15,14 @@ global.uiti = uiti
 const asyncWrap = fn => (option = {}) => new Promise((resolve, reject) => {
     let conf = {
         success: res => {
-            console.log(res)
-            resolve(res)
+          resolve(res)
         },
         fail: err => {
-            reject(err)
+          reject(err)
         }
-    }
-    wx[fn](R.merge(conf, options))
+      }
+    
+      wx[fn](R.merge(conf, option))
 })
 
 wx.getSystemInfoAsync = asyncWrap('getSystemInfo')
