@@ -7,6 +7,7 @@ App({
     console.log(1)
   },
   async getUserInfo () {
+    console.log(global)
     if(this.globalData.userInfo) return this.globalData.userInfo
     const { code } = await wx.loginAsync()
     console.log(code)
